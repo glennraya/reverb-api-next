@@ -13,7 +13,7 @@ class TeamController extends Controller
     public function index()
     {
         return User::whereNot(function (Builder $query) {
-            $query->where('role', 'Project Manager');
+            $query->where('role', 'Product Owner');
         })
             ->get();
     }
